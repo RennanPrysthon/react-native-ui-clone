@@ -2,12 +2,13 @@ import React from 'react';
 import { Animated, Dimensions } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import AlbumImage from '../../components/AlbumImage';
+import BandContent from '../../components/BandContent';
 import PlayerContent from '../../components/PlayerContent';
 import PlayerStatus from '../../components/PlayerStatus';
 import { BottomPlayer, Container } from './styles';
 
 export default function Home() {
-  const { height: H, width: W } = Dimensions.get('window');
+  const { height: H } = Dimensions.get('window');
   let offset = 0;
   const translateY = new Animated.Value(0);
   const animatedEvent = Animated.event(
@@ -49,7 +50,7 @@ export default function Home() {
   return (
     <Container>
       <AlbumImage />
-
+      <BandContent />
       <PanGestureHandler
         onGestureEvent={animatedEvent}
         onHandlerStateChange={onHandlerStateChanged}>
