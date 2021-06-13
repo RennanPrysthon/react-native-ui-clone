@@ -1,9 +1,9 @@
 import React from 'react';
 import { Animated, Dimensions } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
-import AlbumImage from '../components/AlbumImage';
-import PlayerContent from '../components/PlayerContent';
-import PlayerStatus from '../components/PlayerStatus';
+import AlbumImage from '../../components/AlbumImage';
+import PlayerContent from '../../components/PlayerContent';
+import PlayerStatus from '../../components/PlayerStatus';
 import { BottomPlayer, Container } from './styles';
 
 export default function Home() {
