@@ -27,11 +27,10 @@ export const MusicInfo = styled.View`
   flex: 1;
 `;
 
-export const MusicIcon = styled.View`
+export const MusicIcon = styled.Image`
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: #b969a6;
 `;
 
 export const MusicTitle = styled.Text`

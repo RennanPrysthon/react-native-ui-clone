@@ -1,6 +1,7 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import music from '../../assets/album.jpg';
 import {
   Ball,
   BarCompleted,
@@ -35,15 +36,8 @@ const PlayerContent: React.FC<Props> = ({ translateY }) => {
 
       <PlaylistTitle>Now playing</PlaylistTitle>
       <PlaylistName>My playlist</PlaylistName>
-      <MusicBackground
-        style={{
-          shadowColor: '#b969a6',
-          shadowOffset: { width: 0, height: 1 },
-          shadowOpacity: 0.8,
-          shadowRadius: 1,
-          elevation: 20,
-        }}
-      />
+
+      <MusicBackground source={music} resizeMode="cover" />
 
       <MusicTitle>Crooked Soul</MusicTitle>
       <MusicAuthor>Dayseeker</MusicAuthor>
@@ -59,20 +53,29 @@ const PlayerContent: React.FC<Props> = ({ translateY }) => {
       </MusicTime>
 
       <MusicControls>
-        <Icon name="banckward" size={30} />
+        <TouchableOpacity>
+          <Icon name="banckward" size={30} />
+        </TouchableOpacity>
         <PlayPauseCircle>
-          <Icon name="caretright" size={30} />
+          <TouchableOpacity>
+            <Icon name="caretright" size={30} />
+          </TouchableOpacity>
         </PlayPauseCircle>
-        <Icon name="forward" size={30} />
+        <TouchableOpacity>
+          <Icon name="forward" size={30} />
+        </TouchableOpacity>
       </MusicControls>
       <MusicControls>
-        <Icon name="retweet" size={15} color="#aaa" />
-        <Icon name="hearto" size={15} color="#aaa" />
-        <Icon name="swap" size={15} color="#aaa" />
+        <TouchableOpacity>
+          <Icon name="retweet" size={15} color="#aaa" />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon name="hearto" size={15} color="#aaa" />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon name="swap" size={15} color="#aaa" />
+        </TouchableOpacity>
       </MusicControls>
-
-      {/* 
-      <SocialControls></SocialControls> */}
     </Container>
   );
 };

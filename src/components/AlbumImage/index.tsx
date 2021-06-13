@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dimensions, ImageBackground } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import logo from '../../assets/rubel-casas-capa.jpg';
+import logo from '../../assets/dayseeker.jpg';
 
 const AlbumImage: React.FC = () => {
   const { width: W } = Dimensions.get('window');

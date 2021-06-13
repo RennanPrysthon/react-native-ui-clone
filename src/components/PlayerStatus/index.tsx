@@ -1,6 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import album from '../../assets/album.jpg';
 import {
   Container,
   MusicAuthor,
@@ -25,7 +26,7 @@ const PlayerStatus: React.FC<Props> = ({ translateY }) => {
         }),
       }}>
       <PushIndicator />
-      <MusicIcon />
+      <MusicIcon source={album} />
       <MusicInfo>
         <MusicTitle>Crooked Soul</MusicTitle>
         <MusicAuthor>Dayseeker</MusicAuthor>

@@ -36,12 +36,11 @@ export const PlaylistName = styled.Text`
   color: #aaa;
 `;
 
-export const MusicBackground = styled.View`
+export const MusicBackground = styled.Image`
   margin-top: 20px;
   border-radius: 50px;
   width: 250px;
   height: 250px;
-  background-color: #b969a6;
 `;
 
 export const MusicTitle = styled.Text`
