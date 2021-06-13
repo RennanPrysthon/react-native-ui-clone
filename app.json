@@ -1,0 +1,12 @@
+{
+  "name": "ui-clone",
+  "displayName": "ui-clone",
+  "expo": {
+    "name": "ui-clone",
+    "slug": "ui-clone",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
