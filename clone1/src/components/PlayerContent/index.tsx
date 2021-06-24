@@ -1,5 +1,6 @@
 import React from 'react';
-import { Animated, TouchableOpacity } from 'react-native';
+import { TouchableOpacity, ViewProps } from 'react-native';
+import Animated from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/AntDesign';
 import music from '../../assets/album.jpg';
 import {
@@ -19,19 +20,11 @@ import {
   Timer,
 } from './styles';
 
-interface Props {
-  translateY: Animated.AnimatedValue;
-}
+type Props = Animated.AnimateProps<ViewProps>;
 
-const PlayerContent: React.FC<Props> = ({ translateY }) => {
+const PlayerContent: React.FC<Props> = ({ ...rest }) => {
   return (
-    <Container
-      style={{
-        opacity: translateY.interpolate({
-          inputRange: [-360, 0, 160],
-          outputRange: [1, 0, 0],
-        }),
-      }}>
+    <Container {...rest}>
       <PushIndicator />
 
       <PlaylistTitle>Now playing</PlaylistTitle>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { ViewProps } from 'react-native';
+import Animated from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/AntDesign';
 import album from '../../assets/album.jpg';
 import {
@@ -12,19 +13,11 @@ import {
   PushIndicator,
 } from './styles';
 
-interface Props {
-  translateY: Animated.AnimatedValue;
-}
+type Props = Animated.AnimateProps<ViewProps>;
 
-const PlayerStatus: React.FC<Props> = ({ translateY }) => {
+const PlayerStatus: React.FC<Props> = ({ ...rest }) => {
   return (
-    <Container
-      style={{
-        opacity: translateY.interpolate({
-          inputRange: [-70, 0, 10],
-          outputRange: [0, 1, 1],
-        }),
-      }}>
+    <Container {...rest}>
       <PushIndicator />
       <MusicIcon source={album} />
       <MusicInfo>
